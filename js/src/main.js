@@ -16,4 +16,4 @@ const setUser = (name, country, tel = '00000000') => {
 // console.log(setUser("Isadore","EUA"));
 // console.log(setUser("Lela","Mexico","55576676"));
 
-console.log("Log with...")
+console.log("Log with...");

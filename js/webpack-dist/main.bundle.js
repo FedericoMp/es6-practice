@@ -81,19 +81,32 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./js/src/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./js/src/app.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./js/src/main.js":
-/*!************************!*\
-  !*** ./js/src/main.js ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./js/src/app.js":
+/*!***********************!*\
+  !*** ./js/src/app.js ***!
+  \***********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("// 1) first try\r\nlet msj = \"Hello World! Babel compiles\";\r\n// console.log(msj);\r\n\r\n// 2) arrow function\r\nconst names = [\"Roslyn\",\"Bella\",\"Keara\"];\r\nconst printer = names.map( name => `${name} has ${name.length} leters` );\r\n// console.log(printer);\r\n\r\n//  3) default parameters on arrow func\r\nconst setUser = (name, country, tel = '00000000') => {\r\n    var valTel;\r\n    (tel === '00000000') ? ( valTel = \"has no tel.\" ) : ( valTel = `with tel: ${tel}.` ); \r\n    return `${name}, lives in ${country} and ${valTel}`;\r\n}\r\n// console.log(setUser(\"Isadore\",\"EUA\"));\r\n// console.log(setUser(\"Lela\",\"Mexico\",\"55576676\"));\r\n\r\nconsole.log(\"Log with webpack\")\n\n//# sourceURL=webpack:///./js/src/main.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_modules_alert_message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/modules/alert-message */ \"./js/src/modules/alert-message.js\");\n\nObject(_src_modules_alert_message__WEBPACK_IMPORTED_MODULE_0__[\"alertMessage\"])('message test :)');\n\n//# sourceURL=webpack:///./js/src/app.js?");
+
+/***/ }),
+
+/***/ "./js/src/modules/alert-message.js":
+/*!*****************************************!*\
+  !*** ./js/src/modules/alert-message.js ***!
+  \*****************************************/
+/*! exports provided: alertMessage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"alertMessage\", function() { return alertMessage; });\nvar alertMessage = function alertMessage() {\n  var msj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'not message';\n  return alert(msj);\n};\n\n//# sourceURL=webpack:///./js/src/modules/alert-message.js?");
 
 /***/ })
 
