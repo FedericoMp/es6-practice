@@ -1,0 +1,24 @@
+{
+  "name": "es6-practice",
+  "version": "1.0.0",
+  "description": "Javascript test es6",
+  "scripts": {
+    "babel": "babel ./js/src -d ./js/babel-dist --watch",
+    "webpack": "webpack --config webpack.config.js"
+  },
+  "keywords": [
+    "EcmaScript6",
+    "Javascript",
+    "Babel",
+    "Webpack"
+  ],
+  "author": "Federico Perez",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
