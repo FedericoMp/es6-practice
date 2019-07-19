@@ -1,3 +1,3 @@
-import { alertMessage } from '../src/modules/alert-message';
+import { alertMessage } from './modules/alert-message';
 
 alertMessage('message test :)');

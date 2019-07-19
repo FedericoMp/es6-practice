@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_modules_alert_message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/modules/alert-message */ \"./js/src/modules/alert-message.js\");\n\nObject(_src_modules_alert_message__WEBPACK_IMPORTED_MODULE_0__[\"alertMessage\"])('message test :)');\n\n//# sourceURL=webpack:///./js/src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_alert_message__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/alert-message */ \"./js/src/modules/alert-message.js\");\n\nObject(_modules_alert_message__WEBPACK_IMPORTED_MODULE_0__[\"alertMessage\"])('message test :)');\n\n//# sourceURL=webpack:///./js/src/app.js?");
 
 /***/ }),
 
