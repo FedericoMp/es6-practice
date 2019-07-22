@@ -1,0 +1,1 @@
+export const consoleMsj = (msj = 'not message') => console.log( `${msj}`);
