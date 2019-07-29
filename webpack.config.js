@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     
-    // entry: [ 'babel-polyfill', './src/js/app.js' ],
-    entry: './src/ts/app.ts',
+    entry: [ 'babel-polyfill', './src/js/app.js' ],
+    // entry: './src/ts/app.ts',
 
     devtool: 'inline-source-map',
     
