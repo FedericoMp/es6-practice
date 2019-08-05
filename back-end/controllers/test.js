@@ -1,12 +1,19 @@
 const jwt = require('jsonwebtoken');
+const secret = require('../utils/config');
 
+// Endpoints
 const index = (req, res) => {
     res.send('api welcome');
 }
 
-const login = (req, res) => {
-    jwt.sign( {user: 'Fede'}, 
-              'secretkey', 
+const token = (req, res) => {
+    let usr = {
+        'id': 'J1c2VyIjoJIUzI1NiIsInR5',
+        'name': 'Fede'
+    };
+    // sign the usr data with secret key con utils/config file
+    jwt.sign( {usr}, 
+              secret.key, 
               //{expiresIn: '30s'},
               (err, token) => {
                   if (err) {
@@ -18,9 +25,13 @@ const login = (req, res) => {
               });
 }
 
+// --------------------------------------------------------------
+// Once the data was tokenized, we must use jwt.verify() with [secret-key] and req.token => (returned from) middleware
+// actions defined on router, middleware loads on router
+// hello and take => decode data with token returned from middleware
 const hello = (req, res) => {
     jwt.verify( req.token,
-                'secretkey',
+                secret.key,
                 (err, authData) => {
                     if (err) {
                         console.log(err);
@@ -33,7 +44,7 @@ const hello = (req, res) => {
 
 const take = (req, res) => {
     jwt.verify( req.token,
-                'secretkey',
+                secret.key,
                 (err, authData) => {
                     if (err) {
                         console.log(err);
@@ -46,7 +57,7 @@ const take = (req, res) => {
 
 module.exports = {
     index,
-    login,
+    token,
     hello,
     take
 }

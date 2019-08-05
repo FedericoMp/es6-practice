@@ -1,3 +1,4 @@
+// Main Server with Express.js and JWT
 const express = require('express');
 const app = express();
 const port = 3200;
