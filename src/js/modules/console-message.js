@@ -1,1 +1,2 @@
-export const consoleMsj = (msj = 'not message') => console.log( `${msj}`);
+const consoleMsj = (msj = 'console not message') => msj;
+module.exports = consoleMsj;

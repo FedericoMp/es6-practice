@@ -1,1 +1,2 @@
-export const alertMessage = ( msj = 'not message' ) => alert(msj);
+const alertMessage = ( msj = 'not message' ) => msj;
+module.exports = alertMessage;
