@@ -7,7 +7,7 @@
     "build": "webpack --config webpack.config.js --mode production",
     "start": "webpack-dev-server",
     "test": "mocha 'src/js/**/*.spec.js'",
-    "lint": "eslint src"
+    "lint": "eslint **/*.js --fix"
   },
   "keywords": [
     "EcmaScript6",
@@ -22,6 +22,7 @@
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.3.3",
     "babel-loader": "^8.0.6",
@@ -38,7 +39,7 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "babel-eslint": "^10.0.2",
     "babel-polyfill": "^6.26.0"
   }
 }

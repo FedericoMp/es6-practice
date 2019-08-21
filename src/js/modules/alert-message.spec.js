@@ -1,5 +1,5 @@
-var assert = require('chai').assert;
-var alertMessage = require('./alert-message');
+const assert = require('chai').assert;
+const alertMessage = require('./alert-message');
 
 // use describe.only to test only 'this' one.
 describe('Test module: alert message', () => {

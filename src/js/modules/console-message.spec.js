@@ -1,5 +1,5 @@
-var assert = require('chai').assert;
-var consoleMsj = require('./console-message');
+const assert = require('chai').assert;
+const consoleMsj = require('./console-message');
 
 describe('Test module: console message', () => {
 	describe('#consoleMsj', () => {
