@@ -27,7 +27,6 @@ module.exports = {
 		'no-eval': 'error',
 		'no-lone-blocks': 'error',
 		'no-multi-spaces': 'error',
-		'no-useless-return': 'error',
 		'no-var': 'error',
 		'no-console': 'off',
 		'no-throw-literal': 'error'
