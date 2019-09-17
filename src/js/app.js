@@ -9,13 +9,13 @@ import { Observable } from 'rxjs';
 
 // observable
 const obs2$ = Observable.create(
-	function subscribe(stream) {
-		// observers
-		stream.next(1);
-		stream.next(2);
+	function subscribe(subscriber) {
+		// observers > Subscriber > para implementar operators
+		subscriber.next(1);
+		subscriber.next(2);
 		setTimeout(() => {
-			stream.next(3);
-			stream.complete('Complete!');
+			subscriber.next(3);
+			subscriber.complete('Complete!');
 		}, 3000);
 	}
 );
@@ -46,15 +46,22 @@ const obs2$ = Observable.create(
 // });
 
 // mode 4
+// observer
+// const IObs = {
+// 	next: function (data) {
+// 		console.log(data);
+// 	},
+// 	error: function(err) {
+// 		console.error(err);
+// 	},
+// 	complete: function() {
+// 		console.log('done!');
+// 	}
+// };
+// observer
 const IObs = {
-	next: function (data) {
-		console.log(data);
-	},
-	error: function(err) {
-		console.error(err);
-	},
-	complete: function() {
-		console.log('done!');
-	}
+	next: data => console.log(data),
+	error: err => console.error(err),
+	complete: () => console.log('done!')
 };
 obs2$.subscribe(IObs);
