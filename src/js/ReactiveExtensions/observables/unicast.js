@@ -1,4 +1,4 @@
-import { Observable, Subject, BehaviorSubject, from, of } from 'rxjs';
+import { Observable, from, of } from 'rxjs';
 
 // observable > coleccion lazy de multiples valores, una ejecucion independiente para cada observer suscrito | Unicast
 export const observable$ = Observable.create(
@@ -23,9 +23,6 @@ export const observable$ = Observable.create(
 		}
 	}
 );
-
-// subject > tipo especial de observable; permite difundir valores a multiples obresrvers | Multicast
-export const subject$ = new Subject();
 
 // retorna un observable de los valores que se le pasan por param. coleccion
 export const obsFrom$ = from([32,2]);
